@@ -30,17 +30,21 @@ class GoogleGenerative {
     }()
     
     var model : GenerativeModel
-    
+    var chat : Chat
     init() {
-        self.model = GenerativeModel(name: "gemini-pro", apiKey: apiKey)
+        self.model = GenerativeModel(name: "gemini-pro", apiKey: apiKey,generationConfig: GenerationConfig(maxOutputTokens: 100))
+        self.chat = model.startChat()
     }
     
     func sendRequest(prompt : String) async -> String {
-        var response = try? await model.generateContent(prompt)
+        var response = try? await chat.sendMessage(prompt)
         if let resp = response {
             return resp.text ?? "sorry, your response is not available"
         } else {
+            
+            print("Response : \(String(describing: response))")
             return "Error, please check your internet"
+            
         }
     }
 }

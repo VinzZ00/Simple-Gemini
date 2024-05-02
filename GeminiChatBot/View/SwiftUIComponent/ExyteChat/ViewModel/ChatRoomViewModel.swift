@@ -30,10 +30,6 @@ class ChatRoomViewModel : ObservableObject {
         chatInteractor.send(draftMessage: draft)
     }
     
-    func onStop() {
-        chatInteractor.disconnect()
-    }
-    
     func onStart() {
         chatInteractor.messages
 
