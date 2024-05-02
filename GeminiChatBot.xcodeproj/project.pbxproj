@@ -1,0 +1,571 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AC5CB19A2BE260A500959712 /* GoogleGenerativeAI in Frameworks */ = {isa = PBXBuildFile; productRef = AC5CB1992BE260A500959712 /* GoogleGenerativeAI */; };
+		AC5CB19C2BE27B1100959712 /* google-api-info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC5CB19B2BE27B1100959712 /* google-api-info.plist */; };
+		AC5CB19F2BE27CDD00959712 /* Google-gemini-api.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5CB19E2BE27CDD00959712 /* Google-gemini-api.swift */; };
+		AC7930E62BE13C9C006C08FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC7930E52BE13C9C006C08FE /* Assets.xcassets */; };
+		AC7930E92BE13C9C006C08FE /* Base in Resources */ = {isa = PBXBuildFile; fileRef = AC7930E82BE13C9C006C08FE /* Base */; };
+		ACAAE4522BE13F0E003D63BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAAE4422BE13F0E003D63BE /* AppDelegate.swift */; };
+		ACAAE4532BE13F0E003D63BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAAE4432BE13F0E003D63BE /* SceneDelegate.swift */; };
+		ACAAE4542BE13F0E003D63BE /* ChatInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAAE4452BE13F0E003D63BE /* ChatInteractor.swift */; };
+		ACAAE4552BE13F0E003D63BE /* interactorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAAE4462BE13F0E003D63BE /* interactorProtocol.swift */; };
+		ACAAE4562BE13F0E003D63BE /* MockChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAAE4482BE13F0E003D63BE /* MockChat.swift */; };
+		ACAAE4572BE13F0E003D63BE /* ChatRoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAAE44A2BE13F0E003D63BE /* ChatRoomViewModel.swift */; };
+		ACAAE4582BE13F0E003D63BE /* ChatRoomSwiftUIComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAAE44C2BE13F0E003D63BE /* ChatRoomSwiftUIComponent.swift */; };
+		ACAAE4592BE13F0E003D63BE /* ChatRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAAE44F2BE13F0E003D63BE /* ChatRoom.swift */; };
+		ACAAE45C2BE16A73003D63BE /* draftMessage+MockChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAAE45B2BE16A73003D63BE /* draftMessage+MockChat.swift */; };
+		E845F8EAC0CFF56E041506DD /* Pods_GeminiChatBot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46D5B2B387E2DC81D436998D /* Pods_GeminiChatBot.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		46D5B2B387E2DC81D436998D /* Pods_GeminiChatBot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeminiChatBot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		537DCC26AA6DEC6C6981D748 /* Pods-GeminiChatBot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeminiChatBot.debug.xcconfig"; path = "Target Support Files/Pods-GeminiChatBot/Pods-GeminiChatBot.debug.xcconfig"; sourceTree = "<group>"; };
+		9307B51C582CE17859781378 /* Pods-GeminiChatBot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeminiChatBot.release.xcconfig"; path = "Target Support Files/Pods-GeminiChatBot/Pods-GeminiChatBot.release.xcconfig"; sourceTree = "<group>"; };
+		AC5CB19B2BE27B1100959712 /* google-api-info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "google-api-info.plist"; sourceTree = "<group>"; };
+		AC5CB19E2BE27CDD00959712 /* Google-gemini-api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Google-gemini-api.swift"; sourceTree = "<group>"; };
+		AC7930D92BE13C9A006C08FE /* GeminiChatBot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeminiChatBot.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC7930E52BE13C9C006C08FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AC7930E82BE13C9C006C08FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AC7930EA2BE13C9C006C08FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACAAE4422BE13F0E003D63BE /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		ACAAE4432BE13F0E003D63BE /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		ACAAE4452BE13F0E003D63BE /* ChatInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatInteractor.swift; sourceTree = "<group>"; };
+		ACAAE4462BE13F0E003D63BE /* interactorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = interactorProtocol.swift; sourceTree = "<group>"; };
+		ACAAE4482BE13F0E003D63BE /* MockChat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockChat.swift; sourceTree = "<group>"; };
+		ACAAE44A2BE13F0E003D63BE /* ChatRoomViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRoomViewModel.swift; sourceTree = "<group>"; };
+		ACAAE44C2BE13F0E003D63BE /* ChatRoomSwiftUIComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRoomSwiftUIComponent.swift; sourceTree = "<group>"; };
+		ACAAE44F2BE13F0E003D63BE /* ChatRoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRoom.swift; sourceTree = "<group>"; };
+		ACAAE45B2BE16A73003D63BE /* draftMessage+MockChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "draftMessage+MockChat.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AC7930D62BE13C9A006C08FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E845F8EAC0CFF56E041506DD /* Pods_GeminiChatBot.framework in Frameworks */,
+				AC5CB19A2BE260A500959712 /* GoogleGenerativeAI in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1D033B754F4774C67FEE0665 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				46D5B2B387E2DC81D436998D /* Pods_GeminiChatBot.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5EF47707E0C868DAD2F30A2B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				537DCC26AA6DEC6C6981D748 /* Pods-GeminiChatBot.debug.xcconfig */,
+				9307B51C582CE17859781378 /* Pods-GeminiChatBot.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		AC5CB1972BE237F900959712 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				AC5CB19D2BE27CCD00959712 /* Services */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		AC5CB19D2BE27CCD00959712 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				AC5CB19E2BE27CDD00959712 /* Google-gemini-api.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		AC7930D02BE13C9A006C08FE = {
+			isa = PBXGroup;
+			children = (
+				AC7930DB2BE13C9A006C08FE /* GeminiChatBot */,
+				AC7930DA2BE13C9A006C08FE /* Products */,
+				5EF47707E0C868DAD2F30A2B /* Pods */,
+				1D033B754F4774C67FEE0665 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AC7930DA2BE13C9A006C08FE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AC7930D92BE13C9A006C08FE /* GeminiChatBot.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AC7930DB2BE13C9A006C08FE /* GeminiChatBot */ = {
+			isa = PBXGroup;
+			children = (
+				AC5CB1972BE237F900959712 /* Core */,
+				ACAAE4442BE13F0E003D63BE /* Config */,
+				ACAAE4412BE13F0D003D63BE /* Deprecated */,
+				ACAAE4502BE13F0E003D63BE /* View */,
+				AC7930E52BE13C9C006C08FE /* Assets.xcassets */,
+				AC7930EA2BE13C9C006C08FE /* Info.plist */,
+				AC5CB19B2BE27B1100959712 /* google-api-info.plist */,
+			);
+			path = GeminiChatBot;
+			sourceTree = "<group>";
+		};
+		ACAAE4412BE13F0D003D63BE /* Deprecated */ = {
+			isa = PBXGroup;
+			children = (
+				AC7930E72BE13C9C006C08FE /* LaunchScreen.storyboard */,
+			);
+			path = Deprecated;
+			sourceTree = "<group>";
+		};
+		ACAAE4442BE13F0E003D63BE /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				ACAAE4422BE13F0E003D63BE /* AppDelegate.swift */,
+				ACAAE4432BE13F0E003D63BE /* SceneDelegate.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		ACAAE4472BE13F0E003D63BE /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				ACAAE4452BE13F0E003D63BE /* ChatInteractor.swift */,
+				ACAAE4462BE13F0E003D63BE /* interactorProtocol.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		ACAAE4492BE13F0E003D63BE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ACAAE4482BE13F0E003D63BE /* MockChat.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ACAAE44B2BE13F0E003D63BE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				ACAAE44A2BE13F0E003D63BE /* ChatRoomViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		ACAAE44D2BE13F0E003D63BE /* ExyteChat */ = {
+			isa = PBXGroup;
+			children = (
+				ACAAE45A2BE16A64003D63BE /* Extension */,
+				ACAAE4472BE13F0E003D63BE /* Interactor */,
+				ACAAE4492BE13F0E003D63BE /* Model */,
+				ACAAE44B2BE13F0E003D63BE /* ViewModel */,
+				ACAAE44C2BE13F0E003D63BE /* ChatRoomSwiftUIComponent.swift */,
+			);
+			path = ExyteChat;
+			sourceTree = "<group>";
+		};
+		ACAAE44E2BE13F0E003D63BE /* SwiftUIComponent */ = {
+			isa = PBXGroup;
+			children = (
+				ACAAE44D2BE13F0E003D63BE /* ExyteChat */,
+			);
+			path = SwiftUIComponent;
+			sourceTree = "<group>";
+		};
+		ACAAE4502BE13F0E003D63BE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ACAAE44E2BE13F0E003D63BE /* SwiftUIComponent */,
+				ACAAE44F2BE13F0E003D63BE /* ChatRoom.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ACAAE45A2BE16A64003D63BE /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				ACAAE45B2BE16A73003D63BE /* draftMessage+MockChat.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AC7930D82BE13C9A006C08FE /* GeminiChatBot */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC7930ED2BE13C9C006C08FE /* Build configuration list for PBXNativeTarget "GeminiChatBot" */;
+			buildPhases = (
+				E91098E604300586CCB57012 /* [CP] Check Pods Manifest.lock */,
+				AC7930D52BE13C9A006C08FE /* Sources */,
+				AC7930D62BE13C9A006C08FE /* Frameworks */,
+				AC7930D72BE13C9A006C08FE /* Resources */,
+				23BFEB0B0256F8A263558B11 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GeminiChatBot;
+			packageProductDependencies = (
+				AC5CB1992BE260A500959712 /* GoogleGenerativeAI */,
+			);
+			productName = GeminiChatBot;
+			productReference = AC7930D92BE13C9A006C08FE /* GeminiChatBot.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AC7930D12BE13C9A006C08FE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					AC7930D82BE13C9A006C08FE = {
+						CreatedOnToolsVersion = 15.3;
+					};
+				};
+			};
+			buildConfigurationList = AC7930D42BE13C9A006C08FE /* Build configuration list for PBXProject "GeminiChatBot" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AC7930D02BE13C9A006C08FE;
+			packageReferences = (
+				AC5CB1982BE260A500959712 /* XCRemoteSwiftPackageReference "generative-ai-swift" */,
+			);
+			productRefGroup = AC7930DA2BE13C9A006C08FE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AC7930D82BE13C9A006C08FE /* GeminiChatBot */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AC7930D72BE13C9A006C08FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC5CB19C2BE27B1100959712 /* google-api-info.plist in Resources */,
+				AC7930E62BE13C9C006C08FE /* Assets.xcassets in Resources */,
+				AC7930E92BE13C9C006C08FE /* Base in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		23BFEB0B0256F8A263558B11 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GeminiChatBot/Pods-GeminiChatBot-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GeminiChatBot/Pods-GeminiChatBot-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GeminiChatBot/Pods-GeminiChatBot-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E91098E604300586CCB57012 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GeminiChatBot-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AC7930D52BE13C9A006C08FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACAAE4522BE13F0E003D63BE /* AppDelegate.swift in Sources */,
+				ACAAE4562BE13F0E003D63BE /* MockChat.swift in Sources */,
+				ACAAE4582BE13F0E003D63BE /* ChatRoomSwiftUIComponent.swift in Sources */,
+				ACAAE45C2BE16A73003D63BE /* draftMessage+MockChat.swift in Sources */,
+				ACAAE4572BE13F0E003D63BE /* ChatRoomViewModel.swift in Sources */,
+				ACAAE4542BE13F0E003D63BE /* ChatInteractor.swift in Sources */,
+				AC5CB19F2BE27CDD00959712 /* Google-gemini-api.swift in Sources */,
+				ACAAE4552BE13F0E003D63BE /* interactorProtocol.swift in Sources */,
+				ACAAE4592BE13F0E003D63BE /* ChatRoom.swift in Sources */,
+				ACAAE4532BE13F0E003D63BE /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AC7930E72BE13C9C006C08FE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC7930E82BE13C9C006C08FE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AC7930EB2BE13C9C006C08FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AC7930EC2BE13C9C006C08FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AC7930EE2BE13C9C006C08FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 537DCC26AA6DEC6C6981D748 /* Pods-GeminiChatBot.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 382VG5FRJK;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GeminiChatBot/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AA.GeminiChatBot;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AC7930EF2BE13C9C006C08FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9307B51C582CE17859781378 /* Pods-GeminiChatBot.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 382VG5FRJK;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GeminiChatBot/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AA.GeminiChatBot;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AC7930D42BE13C9A006C08FE /* Build configuration list for PBXProject "GeminiChatBot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC7930EB2BE13C9C006C08FE /* Debug */,
+				AC7930EC2BE13C9C006C08FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC7930ED2BE13C9C006C08FE /* Build configuration list for PBXNativeTarget "GeminiChatBot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC7930EE2BE13C9C006C08FE /* Debug */,
+				AC7930EF2BE13C9C006C08FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AC5CB1982BE260A500959712 /* XCRemoteSwiftPackageReference "generative-ai-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/generative-ai-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AC5CB1992BE260A500959712 /* GoogleGenerativeAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AC5CB1982BE260A500959712 /* XCRemoteSwiftPackageReference "generative-ai-swift" */;
+			productName = GoogleGenerativeAI;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = AC7930D12BE13C9A006C08FE /* Project object */;
+}

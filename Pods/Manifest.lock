@@ -1,0 +1,32 @@
+PODS:
+  - ActivityIndicatorView (1.1.1)
+  - ExyteChat (1.3.7):
+    - ActivityIndicatorView
+    - ExyteMediaPicker
+    - FloatingButton
+    - SwiftUIIntrospect
+  - ExyteMediaPicker (2.2.2)
+  - FloatingButton (1.3.0)
+  - SwiftUIIntrospect (1.1.3)
+
+DEPENDENCIES:
+  - ExyteChat
+
+SPEC REPOS:
+  trunk:
+    - ActivityIndicatorView
+    - ExyteChat
+    - ExyteMediaPicker
+    - FloatingButton
+    - SwiftUIIntrospect
+
+SPEC CHECKSUMS:
+  ActivityIndicatorView: f14ac8e200a344fe992577807998b0c8562bd964
+  ExyteChat: adaa4098ce27e7397f86f41a587a0b574ce9fdf5
+  ExyteMediaPicker: 70fcb508e2502f422db27bf5f29e1ea831b07d5f
+  FloatingButton: 86f862465b950e053279b3c2ccbfee7f823688bf
+  SwiftUIIntrospect: 622899b318ecf437d0bef44b79bec10c69efb86f
+
+PODFILE CHECKSUM: f16f75b88d4ecb670b6c7f3c7b49cfac81881e10
+
+COCOAPODS: 1.12.1

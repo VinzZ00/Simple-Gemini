@@ -1,0 +1,6 @@
+${PODS_ROOT}/Target Support Files/Pods-GeminiChatBot/Pods-GeminiChatBot-frameworks.sh
+${BUILT_PRODUCTS_DIR}/ActivityIndicatorView/ActivityIndicatorView.framework
+${BUILT_PRODUCTS_DIR}/ExyteChat/ExyteChat.framework
+${BUILT_PRODUCTS_DIR}/ExyteMediaPicker/ExyteMediaPicker.framework
+${BUILT_PRODUCTS_DIR}/FloatingButton/FloatingButton.framework
+${BUILT_PRODUCTS_DIR}/SwiftUIIntrospect/SwiftUIIntrospect.framework

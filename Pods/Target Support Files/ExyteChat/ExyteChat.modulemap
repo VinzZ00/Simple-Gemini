@@ -1,0 +1,6 @@
+framework module ExyteChat {
+  umbrella header "ExyteChat-umbrella.h"
+
+  export *
+  module * { export * }
+}

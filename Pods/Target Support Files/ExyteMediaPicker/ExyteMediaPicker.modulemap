@@ -1,0 +1,6 @@
+framework module ExyteMediaPicker {
+  umbrella header "ExyteMediaPicker-umbrella.h"
+
+  export *
+  module * { export * }
+}
