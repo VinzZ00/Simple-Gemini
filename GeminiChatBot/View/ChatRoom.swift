@@ -34,20 +34,10 @@ class ChatRoom: UIViewController {
         return hostingController
     }()
     
-    
-    
-    
     override func loadView() {
         super.loadView()
         // Do any additional setup after loading the view.
         view.backgroundColor = .white
-//        view.addSubview(uiLabel)
-        
-//        NSLayoutConstraint.activate([
-//            uiLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-//            uiLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-//            uiLabel.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor)
-//        ])
         
         addChild(uiviewChat)
         
@@ -57,8 +47,6 @@ class ChatRoom: UIViewController {
         view.subviews.forEach { view in
             view.translatesAutoresizingMaskIntoConstraints = false
         }
-        
-        
         
         let constraints = [
             greeting.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),

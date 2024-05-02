@@ -11,8 +11,6 @@ import ExyteChat
 
 struct ChatRoomSwiftUIComponent: View {
     @ObservedObject var viewModel: ChatRoomViewModel
-    //    = ChatRoomViewModel(chatInteractor: ChatInteractor(user: User(id: "1", name: "User", avatarURL: nil, isCurrentUser: true)))
-    
     
     var body: some View {
         VStack {

@@ -15,7 +15,6 @@ protocol ChatInteractorProtocol {
     var gemini: ExyteChat.User { get }
 
     func send(draftMessage: ExyteChat.DraftMessage)
-    func disconnect()
 
     func fetchGemini(request : String)
     func didFetchRequest(draftMessage : ExyteChat.DraftMessage)

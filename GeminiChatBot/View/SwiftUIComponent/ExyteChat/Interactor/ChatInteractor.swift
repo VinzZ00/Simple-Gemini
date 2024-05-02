@@ -39,8 +39,6 @@ final class ChatInteractor : ChatInteractorProtocol {
     
     
     func send(draftMessage: ExyteChat.DraftMessage) {
-        // TODO: send request to gemini & call response
-        
         // MARK: In-case of in need of validation
 //        if draftMessage.id != nil {
 //            guard let index = chatState.value.firstIndex(where: {$0.uid
@@ -79,13 +77,4 @@ final class ChatInteractor : ChatInteractorProtocol {
             }
         }
     }
-    
-    func disconnect() {
-        
-    }
-    
-    
-    
-    
-    
 }

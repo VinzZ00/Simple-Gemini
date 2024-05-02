@@ -14,8 +14,8 @@
             filePath = "GeminiChatBot/View/SwiftUIComponent/ExyteChat/ChatRoomSwiftUIComponent.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>
@@ -46,8 +46,8 @@
             filePath = "GeminiChatBot/View/SwiftUIComponent/ExyteChat/Interactor/ChatInteractor.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
             landmarkName = "send(draftMessage:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -62,8 +62,8 @@
             filePath = "GeminiChatBot/View/SwiftUIComponent/ExyteChat/Interactor/ChatInteractor.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
             landmarkName = "send(draftMessage:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -72,6 +72,38 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "57389CD7-FCF9-4770-976C-357EB9DB19D1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GeminiChatBot/View/SwiftUIComponent/ExyteChat/Interactor/ChatInteractor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "send(draftMessage:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "41AD6220-5E1C-4F9A-9D6E-EBE608F1B7B2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GeminiChatBot/View/SwiftUIComponent/ExyteChat/Interactor/ChatInteractor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "send(draftMessage:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3919CB17-A03F-4340-AED3-570D77699F0A"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -87,7 +119,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "41AD6220-5E1C-4F9A-9D6E-EBE608F1B7B2"
+            uuid = "E0D96648-263B-462B-8EAC-5542607B5AC6"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -103,7 +135,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "3919CB17-A03F-4340-AED3-570D77699F0A"
+            uuid = "622C12D8-2BA9-4530-9AE0-D3BB029117A4"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -119,23 +151,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "E0D96648-263B-462B-8EAC-5542607B5AC6"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GeminiChatBot/View/SwiftUIComponent/ExyteChat/Interactor/ChatInteractor.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
-            landmarkName = "send(draftMessage:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "622C12D8-2BA9-4530-9AE0-D3BB029117A4"
+            uuid = "34662316-5408-4123-B76B-C941AFEBD584"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -151,22 +167,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "34662316-5408-4123-B76B-C941AFEBD584"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GeminiChatBot/View/SwiftUIComponent/ExyteChat/Interactor/ChatInteractor.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
-            landmarkName = "send(draftMessage:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "126AC57B-0E58-42FE-B41F-216D4AD758FB"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -174,8 +174,8 @@
             filePath = "GeminiChatBot/View/SwiftUIComponent/ExyteChat/ChatRoomSwiftUIComponent.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>
@@ -190,8 +190,8 @@
             filePath = "GeminiChatBot/View/SwiftUIComponent/ExyteChat/Interactor/ChatInteractor.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
             landmarkName = "send(draftMessage:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -206,8 +206,8 @@
             filePath = "GeminiChatBot/View/SwiftUIComponent/ExyteChat/ChatRoomSwiftUIComponent.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>
