@@ -9,3 +9,6 @@ target 'GeminiChatBot' do
   pod 'ExyteChat'
 
 end
+
+AIzaSyDSWJGxmdZs47_5ymrCWQ5JItA4r0-Y-PE
+

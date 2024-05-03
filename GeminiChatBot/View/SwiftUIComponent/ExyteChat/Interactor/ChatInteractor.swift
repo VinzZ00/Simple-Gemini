@@ -11,20 +11,21 @@ import ExyteChat
 
 final class ChatInteractor : ChatInteractorProtocol {
     
-    public static var testingMessages : [ExyteChat.Message] = {
-        [
-            MockChat.createMockChatForTest(addingTime: 0).toChatMessage(),
-            MockChat.createMockChatForTest(addingTime: 2).toChatMessage()
-        ]
-    }()
+    public static var testingMessages : [ExyteChat.Message] =
+    [
+        MockChat.createMockChatForTest(addingTime: 0).toChatMessage(),
+        MockChat.createMockChatForTest(addingTime: 2).toChatMessage()
+    ]
+    
     
     init(user : ExyteChat.User) {
         self.sender = user
     }
     
     var googleGenerative : GoogleGenerative = GoogleGenerative.shared
-    var messages: AnyPublisher<[MockChat], Never> { chatState.eraseToAnyPublisher()
-    }
+    
+    
+    var messages: CurrentValueSubject<[MockChat], Never> = CurrentValueSubject<[MockChat], Never>([])
     
     var sender: ExyteChat.User? = User(id: "1", name: "User", avatarURL: nil, isCurrentUser: true)
     
@@ -34,23 +35,15 @@ final class ChatInteractor : ChatInteractorProtocol {
         avatarURL: nil,
         isCurrentUser: false
     )
-    private lazy var chatState = CurrentValueSubject<[MockChat], Never>([])
+
     
     
     
     func send(draftMessage: ExyteChat.DraftMessage) {
-        // MARK: In-case of in need of validation
-//        if draftMessage.id != nil {
-//            guard let index = chatState.value.firstIndex(where: {$0.uid
-//                == draftMessage.id}) else { return }
-//            
-//            chatState.value.remove(at: index)
-//        }
-        
         Task {
             let message = await draftMessage.toMockChat(user: sender!, status: .sent)
             DispatchQueue.main.async { [weak self] in
-                self?.chatState.value.append(message)
+                self?.messages.value.append(message)
             }
             fetchGemini(request: message.text)
         }
@@ -73,7 +66,7 @@ final class ChatInteractor : ChatInteractorProtocol {
         Task {
             let message = await draftMessage.toMockChat(user: gemini, status: .sent)
             DispatchQueue.main.async { [weak self] in
-                self?.chatState.value.append(message)
+                self?.messages.value.append(message)
             }
         }
     }

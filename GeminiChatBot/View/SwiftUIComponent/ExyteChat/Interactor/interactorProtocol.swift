@@ -10,7 +10,7 @@ import Combine
 import ExyteChat
 
 protocol ChatInteractorProtocol {
-    var messages: AnyPublisher<[MockChat], Never> { get }
+    var messages: CurrentValueSubject<[MockChat], Never> { get }
     var sender: ExyteChat.User? { get }
     var gemini: ExyteChat.User { get }
 
