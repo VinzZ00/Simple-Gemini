@@ -37,14 +37,12 @@ class GoogleGenerative {
     }
     
     func sendRequest(prompt : String) async -> String {
-        var response = try? await chat.sendMessage(prompt)
+        let response = try? await chat.sendMessage(prompt)
         if let resp = response {
             return resp.text ?? "sorry, your response is not available"
         } else {
-            
             print("Response : \(String(describing: response))")
             return "Error, please check your internet"
-            
         }
     }
 }

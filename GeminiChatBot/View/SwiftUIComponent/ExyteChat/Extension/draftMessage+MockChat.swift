@@ -9,15 +9,12 @@ import Foundation
 import ExyteChat
 
 extension DraftMessage {
-    func toMockChat(user: User, status: Message.Status = .read) async -> MockChat {
-        
+    func toMockChat(user: User, status: Message.Status = .read) -> MockChat {
         MockChat(
             uid: id ?? UUID().uuidString,
             user: user,
             createdAt: self.createdAt,
             text: self.text)
-        
-
     }
 }
 

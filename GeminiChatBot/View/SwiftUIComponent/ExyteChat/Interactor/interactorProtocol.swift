@@ -16,6 +16,6 @@ protocol ChatInteractorProtocol {
 
     func send(draftMessage: ExyteChat.DraftMessage)
 
-    func fetchGemini(request : String)
+    func fetchGemini(request : String) async
     func didFetchRequest(draftMessage : ExyteChat.DraftMessage)
 }

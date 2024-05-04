@@ -11,7 +11,6 @@ import ExyteChat
 
 class ChatRoomViewModel : ObservableObject {
     private let chatInteractor : ChatInteractorProtocol
-    private var googleGeminiAPI = GoogleGenerative.shared
     
     @Published var message : [Message] = []
     
@@ -32,24 +31,9 @@ class ChatRoomViewModel : ObservableObject {
     
     func onStart() {
         chatInteractor.messages
-
 //        to change the message from mockChat? into mockChat
             .compactMap { chat in
-                chat.map{ $0.toChatMessage() }
+                chat.map{ $0.MockChatToMessage() }
             }.assign(to: &$message)
-    }
-}
-
-
-
-extension DraftMessage {
-    func toMockChat(user: User, status: Message.Status = .read) -> MockChat {
-        MockChat(
-            uid: self.id ?? UUID().uuidString,
-            user: user,
-            createdAt: Date(),
-            status: status,
-            text: self.text
-        )
     }
 }

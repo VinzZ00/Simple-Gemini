@@ -26,7 +26,7 @@ struct MockChat {
 }
 
 extension MockChat {
-    func toChatMessage() -> Message {
+    func MockChatToMessage() -> Message {
         Message(
             id: uid,
             user: user,
