@@ -19,7 +19,7 @@ class GoogleGenerative {
         
         let plist = NSDictionary(contentsOfFile: filePath)
         
-        guard let value = plist?.object(forKey: "gemini_api_key") as? String else { 
+        guard let value = plist?.object(forKey: "gemini_api_key") as? String else {
             fatalError("Couldn't find key 'API_KEY' in 'GenerativeAI-Info.plist'.")
         }
         
@@ -32,17 +32,17 @@ class GoogleGenerative {
     var model : GenerativeModel
     var chat : Chat
     init() {
-        self.model = GenerativeModel(name: "gemini-pro", apiKey: apiKey,generationConfig: GenerationConfig(maxOutputTokens: 100))
+        self.model = GenerativeModel(name: "gemini-pro", apiKey: apiKey,generationConfig: GenerationConfig(maxOutputTokens: 1000))
         self.chat = model.startChat()
     }
     
     func sendRequest(prompt : String) async -> String {
-        let response = try? await chat.sendMessage(prompt)
-        if let resp = response {
-            return resp.text ?? "sorry, your response is not available"
-        } else {
-            print("Response : \(String(describing: response))")
-            return "Error, please check your internet"
+        do {
+            let response = try await chat.sendMessage(prompt)
+                return response.text ?? "sorry, your response is not available"
+        } catch {
+            print("Error for Developer:", error)
+            return "sorry, your response is not available, please try again"
         }
     }
 }
