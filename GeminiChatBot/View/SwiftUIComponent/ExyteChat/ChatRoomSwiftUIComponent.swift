@@ -10,6 +10,7 @@ import ExyteChat
 
 struct ChatRoomSwiftUIComponent: View {
     @ObservedObject var viewModel: ChatRoomViewModel
+    @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
         VStack {
@@ -18,8 +19,16 @@ struct ChatRoomSwiftUIComponent: View {
             } inputViewBuilder: { textBinding, attachments, state, style, actionClosure, _  in
                 Group {
                     HStack {
-                        TextField("Write your message", text: textBinding)
+                        TextField("", text: textBinding)
                             .lineLimit(nil)
+                            .overlay(
+                                    Text("Write your message")
+                                        .opacity(textBinding.wrappedValue.isEmpty ? 1 : 0)
+                                        .foregroundStyle(colorScheme
+                                                         == .dark ? .white.opacity(0.5) : .black.opacity(0.5))
+                                        .padding(.leading, 8), alignment: .leading
+                                )
+                            .foregroundStyle(colorScheme == .dark ? .white : .black)
                         Button { actionClosure(.send)
                             
                         } label: {
@@ -29,7 +38,9 @@ struct ChatRoomSwiftUIComponent: View {
                         .disabled((textBinding.wrappedValue.count < 1))
                     }
                     .padding()
-                    .background(.gray.opacity(0.3))
+                    .background(colorScheme == .dark ? .black
+                                : .gray.opacity(0.3))
+                    
                     .clipShape(RoundedRectangle(cornerRadius: 20))
                     .padding()
                 }
@@ -37,8 +48,6 @@ struct ChatRoomSwiftUIComponent: View {
         }
         .onAppear {
             viewModel.onStart()
-            //            // Only for test
-            //            viewModel.testInteractor()
         }
     }
 }

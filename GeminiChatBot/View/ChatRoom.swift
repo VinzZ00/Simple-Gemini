@@ -15,6 +15,7 @@ class ChatRoom: UIViewController {
     var greeting : UILabel = {
         var l = UILabel()
         l.text = "Welcome to simplest Gemini, enjoy your self :)"
+        l.textColor = .black
         l.translatesAutoresizingMaskIntoConstraints = false
         return l
     }()
@@ -37,6 +38,8 @@ class ChatRoom: UIViewController {
     override func loadView() {
         super.loadView()
         // Do any additional setup after loading the view.
+        
+
         view.backgroundColor = .white
         
         addChild(uiviewChat)
@@ -53,6 +56,7 @@ class ChatRoom: UIViewController {
             greeting.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
             greeting.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
             greeting.heightAnchor.constraint(equalToConstant: 75),
+            
             uiviewChat.view.topAnchor.constraint(equalTo: greeting.bottomAnchor, constant: 20),
             uiviewChat.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             uiviewChat.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),

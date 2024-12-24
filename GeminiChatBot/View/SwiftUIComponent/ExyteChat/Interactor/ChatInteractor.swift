@@ -59,6 +59,7 @@ extension ChatInteractor {
     
     func didFetchRequest(draftMessage: ExyteChat.DraftMessage) {
         // TODO: convert from response to MockChat
+        
         let message = draftMessage.toMockChat(user: gemini, status: .sent)
         self.messages.value.append(message)
     }
